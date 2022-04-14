@@ -3,11 +3,11 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<meta name="MobileOptimized" content="width">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="MobileOptimized" content="width">
     <title>webgl cloack</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
+    <script src="https://unpkg.com/@vkontakte/vk-bridge/dist/browser.min.js"></script>
 	
 <style>
 .container {
@@ -44,22 +44,22 @@
         <div class="spinner"></div>
       </div>
     </div>
-	<div class="container"> 
-		<iframe class="responsive-iframe" src="https://bongacams10.com/track?c=754627?embed=true"></iframe>
-	</div>
+
     <div id="unity-fullscreen-button" style="display: none;"></div>
 	
     <script>
 	
-	var  unityGame;
+      var  unityGame;
+	    
+      vkBridge.send('VKWebAppInit');
 	
       const hideFullScreenButton = "1";
       const buildUrl = "Build";
       const loaderUrl = buildUrl + "/webgl cloack.loader.js";
       const config = {
-        dataUrl: buildUrl + "/webgl cloack.data.gz",
-        frameworkUrl: buildUrl + "/webgl cloack.framework.js.gz",
-        codeUrl: buildUrl + "/webgl cloack.wasm.gz",
+        dataUrl: buildUrl + "/webgl cloack.data",
+        frameworkUrl: buildUrl + "/webgl cloack.framework.js",
+        codeUrl: buildUrl + "/webgl cloack.wasm",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "DefaultCompany",
         productName: "webgl cloack",
